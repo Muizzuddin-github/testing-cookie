@@ -23,7 +23,7 @@ app.use(
       secure: true,
       httpOnly: true,
       maxAge: 3600000,
-      sameSite: "strict",
+      sameSite: "None",
       domain: ".localhost",
     },
   })
