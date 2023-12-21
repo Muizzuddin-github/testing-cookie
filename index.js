@@ -13,7 +13,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: false,
+      secure: true,
       httpOnly: true,
       maxAge: 3600000,
       sameSite: "strict",
