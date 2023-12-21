@@ -29,6 +29,7 @@ app.use(cookieParser());
 // );
 
 app.get("/", function (req, res) {
+  console.log(req.cookies);
   res.send("berhasil terhubung");
 });
 
@@ -43,7 +44,7 @@ app.post("/login", function (req, res) {
     httpOnly: true,
     secure: true,
     maxAge: 24 * 60 * 60 * 1000,
-    sameSite: "none",
+    sameSite: "strict",
   });
 
   res.status(200).json({ message: "login success" });
