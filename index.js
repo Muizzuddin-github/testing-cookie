@@ -24,8 +24,7 @@ app.use(
       httpOnly: true,
       maxAge: 3600000,
       sameSite: "strict",
-      domain:
-        process.env.NODE_ENV === "development" ? ".localhost" : ".domain.com",
+      domain: ".localhost",
     },
   })
 );
