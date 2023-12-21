@@ -39,7 +39,7 @@ app.post("/login", function (req, res) {
     return res.status(400).json({ message: "check your email or password" });
   }
 
-  res.session.token = "login berhasil";
+  req.session.token = "login berhasil";
 
   res.status(200).json({ message: "login success" });
 });
