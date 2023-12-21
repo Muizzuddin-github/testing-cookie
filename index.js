@@ -44,7 +44,7 @@ app.post("/login", function (req, res) {
     httpOnly: true,
     secure: true,
     maxAge: 24 * 60 * 60 * 1000,
-    sameSite: "strict",
+    sameSite: "none",
   });
 
   res.status(200).json({ message: "login success" });
