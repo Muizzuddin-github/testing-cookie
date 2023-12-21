@@ -41,7 +41,7 @@ app.post("/login", function (req, res) {
 
   res.cookie("token", "berhasil login", {
     httpOnly: true,
-    secure: false,
+    secure: true,
     maxAge: 24 * 60 * 60 * 1000,
     sameSite: "none",
   });
