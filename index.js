@@ -39,15 +39,11 @@ app.post("/login", function (req, res) {
     return res.status(400).json({ message: "check your email or password" });
   }
 
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-  );
-
   res.cookie("token", "berhasil login", {
     httpOnly: true,
     secure: false,
-    maxAge: 60 * 60 * 24 * 10000,
+    maxAge: 24 * 60 * 60 * 1000,
+    sameSite: "none",
   });
 
   res.status(200).json({ message: "login success" });
